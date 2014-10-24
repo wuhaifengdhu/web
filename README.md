@@ -21,7 +21,9 @@ netstat -anpt | grep :端口号
 ssh -D 端口号 user@server.ip
 ssh -CNfg -L
 
-
+http代理：
+ssh -qTfnN -D 0.0.0.0:7070 -p 22 root@www.haifwu.com
+然后就可以用hyper的端口当服务器了
 
 查看并杀死node进程
 
