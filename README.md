@@ -14,7 +14,13 @@ Linux node 的安装：
     
 
 查看TCP端口情况：
-netstat -tln | grep 端口号
+netstat -anpt | grep :端口号
+如果是127.0.0.1：端口号    则表示只有本地访问才可，这时候需要再转化
+
+建立任意端口转化
+ssh -D 端口号 user@server.ip
+ssh -CNfg -L
+
 
 
 查看并杀死node进程
